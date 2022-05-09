@@ -14,7 +14,14 @@ class ComicController extends Controller
      */
     public function index()
     {
-        return view('guest/comicsPage');
+        $comics = Comic::paginate(3);
+
+        // $trains = Train::paginate(25);
+
+        $data = [
+            'comic' => $comics,
+        ];
+            return view('guest/comicsPage', $data);
     }
 
     /**
