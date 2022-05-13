@@ -15,4 +15,5 @@ class Comic extends Model
         'sale_date',
         'type',
     ];
+    public $timestamps = false;
 }

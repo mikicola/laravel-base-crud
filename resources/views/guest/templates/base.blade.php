@@ -11,5 +11,6 @@
         {{-- @include('guest.partials.header') --}}
         @yield('content')
         {{-- @include('guest.partials.footer') --}}
+        <script src="{{ asset('js/app.js') }}"></script>
 </body>
 </html>

@@ -18,15 +18,12 @@
                 </div>
                 <div class="my-4">
                     <label for="description" class="form-label">Description</label>
-                    <input type="text" class="form-control" id="description" name="description">
+                    <textarea class="form-control" id="description" name="description"></textarea>
+                    {{-- <input type="text" class="form-control" id="description" name="description"> --}}
                 </div>
                 <div class="my-4">
-                    <label for="thumb" class="form-label">Thumb</label>
+                    <label for="thumb" class="form-label">Image link</label>
                     <input type="text" class="form-control" id="thumb" name="thumb">
-                </div>
-                <div class="my-4">
-                    <label for="address" class="form-label">Address</label>
-                    <input type="text" class="form-control" id="address" name="address">
                 </div>
                 <div class="my-4">
                     <label for="price" class="form-label">Price</label>
