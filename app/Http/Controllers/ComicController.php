@@ -16,12 +16,10 @@ class ComicController extends Controller
     {
         $comics = Comic::paginate(3);
 
-        // $trains = Train::paginate(25);
-
         $data = [
             'comic' => $comics,
         ];
-            return view('guest/comicsPage', $data);
+            return view('guest/comics/comicsPage', $data);
     }
 
     /**
@@ -31,8 +29,7 @@ class ComicController extends Controller
      */
     public function create()
     {
-        //
-        return view('guest.create');
+        return view('guest.comics.create');
     }
 
     /**
@@ -49,12 +46,13 @@ class ComicController extends Controller
         // metodo 1
         // $comic = new Comic();
         // $comic->fill($formData);
-        // $save = $comic->save();;
+        // $save = $comic->save();
         // ____________________
+
         // metodo 2
         $save = Comic::create($formData);
         // dd($save);
-        return redirect()->route('guest/comicsPage', '$save->id');
+        return redirect()->route('guest/comics/comicsPage', '$save->id'); //TOFIX
     }
 
     /**
@@ -65,7 +63,14 @@ class ComicController extends Controller
      */
     public function show(Comic $comic)
     {
-        //
+        // dd($comic);
+        return view('guest.comics.show', [
+            // title = titolo pagina
+            'title' => $comic->title,
+
+            // item = singolo comic
+            'item' => $comic,
+        ]);
     }
 
     /**
@@ -76,7 +81,7 @@ class ComicController extends Controller
      */
     public function edit(Comic $comic)
     {
-        //
+        return view('guest.comics.edit', compact('comic'));
     }
 
     /**
