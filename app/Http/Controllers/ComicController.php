@@ -52,7 +52,7 @@ class ComicController extends Controller
         // metodo 2
         $save = Comic::create($formData);
         // dd($save);
-        return redirect()->route('guest/comics/comicsPage', '$save->id'); //TOFIX
+        return redirect()->route('guest.comics.show', $save->id); //TOFIX
     }
 
     /**
@@ -93,7 +93,12 @@ class ComicController extends Controller
      */
     public function update(Request $request, Comic $comic)
     {
-        //
+        //aggiorna i valori modificati dal form in edit.blade
+        $formData = $request->all();
+        // dd($formData);
+        $comic->update($formData);
+
+        return redirect()->route('guest.comics.show', $comic->id); //TOFIX
     }
 
     /**
