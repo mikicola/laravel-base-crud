@@ -19,7 +19,7 @@ class ComicController extends Controller
         $data = [
             'comic' => $comics,
         ];
-            return view('guest/comics/comicsPage', $data);
+            return view('guest.comics.comicsPage', $data);
     }
 
     /**
@@ -109,6 +109,8 @@ class ComicController extends Controller
      */
     public function destroy(Comic $comic)
     {
-        //
+        $comic->delete();
+
+        return redirect()->route('guest.comics.comicsPage'); //TOFIX
     }
 }

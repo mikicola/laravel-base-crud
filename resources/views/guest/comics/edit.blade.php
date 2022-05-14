@@ -45,8 +45,18 @@
                 </div>
 
 
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" class="btn btn-primary">Salva modifiche</button>
+
+
             </form>
+
+            <form action="{{ route('comics.destroy', $comic->id) }}" method="POST">
+                @csrf
+                @method ('DELETE')
+                <button class="btn btn-danger align-self-start mt-3">Elimina Comic</button>
+            </form>
+
+            <a href="{{ url()->previous() }}" class="btn btn-light mt-3">Torna indietro</a>
         </div>
     </div>
 </div>
