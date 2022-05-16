@@ -5,7 +5,7 @@
 @section('content')
 <div class="container">
     <div class="row">
-        <div class="col">
+        <div class="col my-3">
             {{-- method deve essere post e action store  --}}
             <form method="POST" action="{{ route('comics.store') }}">
 

@@ -5,10 +5,10 @@
 @section('content')
 <main>
     <div class="container">
-        <h1>Comics</h1>
+        <h1 class="text-center py-5">Comics</h1>
 
         {{-- <a href="">Visualizza lista Comics</a> --}}
-        <a href="{{ route('comics.create') }}">Crea nuovo comic</a>
+        {{-- <a href="{{ route('comics.create') }}">Crea nuovo comic</a> --}}
 
         <div class="row row-cols-sm-1 row-cols-md-3">
             @foreach ($comic as $item)
@@ -34,3 +34,4 @@
     </div>
 
 </main>
+@stop

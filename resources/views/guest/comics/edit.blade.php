@@ -5,7 +5,7 @@
 @section('content')
 <div class="container">
     <div class="row">
-        <div class="col">
+        <div class="col my-3">
             {{-- method deve essere post e action update  --}}
             <form method="POST" action="{{ route('comics.update', $comic->id) }}">
 
@@ -20,7 +20,7 @@
                 </div>
                 <div class="my-4">
                     <label for="description" class="form-label">Description</label>
-                    <textarea class="form-control" id="description" name="description" value="{{ $comic->description }}"></textarea>
+                    <textarea class="form-control" id="description" name="description">{{ old('description',$comic->description) }}</textarea>
                     {{-- <input type="text" class="form-control" id="description" name="description"> --}}
                 </div>
                 <div class="my-4">

@@ -3,18 +3,18 @@
         <div class="row">
             <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
                 <ul class="list-unstyled fs-6 mb-0">
-                    {{-- <li>
-                        <a href="{{ route('#') }}" class="text-decoration-none">Home</a>
+                    <li>
+                        <a href="{{ route('comicsPage') }}" class="text-decoration-none">Home</a>
                     </li>
                     <li>
-                        <a href="{{ route('#') }}" class="text-decoration-none">comics</a>
-                    </li> --}}
+                        <a href="{{ route('comicsPage') }}" class="text-decoration-none">Comics</a>
+                    </li>
                 </ul>
             </div>
             <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
                 <ul class="list-unstyled fs-6 mb-0">
                     <li>
-                        <a href="#!" class="text-decoration-none">add Comic</a>
+                        <a href="{{ route('comics.create') }}" class="text-decoration-none">Add Comic</a>
                     </li>
                     <li>
                         <a href="#!" class="text-decoration-none">link</a>
@@ -35,6 +35,6 @@
 
     <div class="text-center p-1" style="background-color: rgba(0, 0, 0, 0.2);">
         © 2022 Copyright:
-        <a class="text-dark" href="{{ route('#') }}">Comics.com</a>
+        <a class="text-dark" href="{{ route('comicsPage') }}">Comics.com</a>
     </div>
 </footer>

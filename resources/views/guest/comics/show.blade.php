@@ -9,7 +9,7 @@
         <div class="row row-cols-sm-1 row-cols-md-3">
 
             <div class="col">
-                <div class="card">
+                <div class="card my-5">
                     <img src="{{ $item->thumb }}" class="card-img-top p-3" alt="$item->series">
 
                     <div class="card-body d-flex flex-column">
