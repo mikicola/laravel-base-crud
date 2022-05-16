@@ -8,9 +8,12 @@
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 </head>
 <body>
-        {{-- @include('guest.partials.header') --}}
+        @include('partials.header')
+
         @yield('content')
-        {{-- @include('guest.partials.footer') --}}
+
+        {{-- @include('partials.footer') --}}
+
         <script src="{{ asset('js/app.js') }}"></script>
 </body>
 </html>
